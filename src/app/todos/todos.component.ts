@@ -18,6 +18,10 @@ export class TodosComponent implements OnInit {
   ngOnInit(): void {
     this.listTodos();
   }
+    
+  deleteTodo(id: string) {
+    client.models.Todo.delete({ id })
+  }
 
   listTodos() {
     try {
